@@ -13,4 +13,14 @@ describe('Multiplication Table', () => {
     //then
     expect(rendered).toBe('1*1=1')
   })
+  it('should throw error input exception when render given start grater than end', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 12
+    const end = 1
+
+
+    //then
+    expect(() => table.render(start, end)).toThrow(new Error('error input'))
+  })
 })
