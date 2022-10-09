@@ -29,4 +29,20 @@ describe('Multiplication Table', () => {
     expect(renderedWithStartNumberLessThenOne).toBe('')
     expect(renderedWithStartNumberLargerThenTen).toBe('')
   })
+
+  it('should return nothing when render given the end number is not in range 1 to 10', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 1
+    const endLessThanOne = 0
+    const endLargerThanTen = 11
+
+    // when
+    const renderedWithEndNumberLessThenOne = table.render(start, endLessThanOne)
+    const renderedWithEndNumberLargerThenTen = table.render(start, endLargerThanTen)
+
+    // then
+    expect(renderedWithEndNumberLessThenOne).toBe('')
+    expect(renderedWithEndNumberLargerThenTen).toBe('')
+  })
 })
