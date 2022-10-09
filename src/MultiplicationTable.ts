@@ -4,11 +4,17 @@ export class MultiplicationTable {
       return ''
     }
 
-    return '1*1=1'
+    const multiplicationList = this.renderTables(start, end)
+
+    return this.mergeMultiplications(multiplicationList)
   }
 
   private checkStartNumberAndEndNumber(start: number, end: number) {
     return start >= 1 && start <= 10 && end >= 1 && end <= 10 && start <= end
+  }
+
+  mergeMultiplications(multiplicationList: string[]): string {
+    return multiplicationList.join('\n')
   }
 
   renderTables(start: number, end: number) {
