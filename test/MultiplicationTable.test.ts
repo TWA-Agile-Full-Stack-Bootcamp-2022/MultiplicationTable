@@ -54,9 +54,21 @@ describe('Multiplication Table', () => {
 
     // when
     const rendered = table.render(start, end)
-  
 
     // then
     expect(rendered).toBe('')
+  })
+
+  it('should render multiplication line of (1, 1)', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 1
+
+    // when
+    const rendered = table.renderLine(start, end)
+
+    // then
+    expect(rendered).toBe('1*1=1')
   })
 })
