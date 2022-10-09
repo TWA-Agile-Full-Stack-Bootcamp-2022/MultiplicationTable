@@ -84,4 +84,20 @@ describe('Multiplication Table', () => {
     // then
     expect(rendered).toBe('1*2=2\t2*2=4')
   })
+
+  it('should render multiplication table of (1, 2)', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 2
+
+    //when
+    const renderedList = table.renderTables(start, end)
+
+    //then
+    expect(renderedList.length).toBe(2)
+    expect(renderedList[0]).toBe('1*1=1')
+    expect(renderedList[1]).toBe('1*2=2\t2*2=4')
+  })
+
 })

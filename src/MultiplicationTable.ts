@@ -11,6 +11,14 @@ export class MultiplicationTable {
     return start >= 1 && start <= 10 && end >= 1 && end <= 10 && start <= end
   }
 
+  renderTables(start: number, end: number) {
+    const multiplicationList: string[] = []
+    for (let num=start; num<=end; num++) {
+      multiplicationList.push(this.renderLine(start, num))
+    }
+    return multiplicationList
+  }
+
   renderLine(start: number, end: number) {
     let multiplicationLine = ''
     for (let num=start; num<end; num++) {
