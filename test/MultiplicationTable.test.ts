@@ -30,7 +30,7 @@ describe('Multiplication Table', () => {
     expect(renderedWithStartNumberLargerThenTen).toBe('')
   })
 
-  it('should return nothing when render given the end number is not in range 1 to 10', () => {
+  it('should return empty string when render given the end number is not in range 1 to 10', () => {
     // given
     const table = new MultiplicationTable()
     const start = 1
@@ -44,5 +44,18 @@ describe('Multiplication Table', () => {
     // then
     expect(renderedWithEndNumberLessThenOne).toBe('')
     expect(renderedWithEndNumberLargerThenTen).toBe('')
+  })
+
+  it('should return empty string when render given the start number is larger than the end number', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 1
+
+    // when
+    const rendered = table.render(start, end)
+
+    // then
+    expect(rendered).toBe('')
   })
 })
