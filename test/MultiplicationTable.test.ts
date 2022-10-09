@@ -137,4 +137,19 @@ describe('Multiplication Table', () => {
     //then
     expect(tablePrint).toBe(BLANK_STRING)
   })
+
+  it('should return multiplication table when call render given start number 2 and end number 4', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 4
+    //when
+    const tablePrint = table.render(start, end)
+
+    //then
+    expect(tablePrint).toBe('2*2=4\n' +
+        '2*3=6  3*3=9\n' +
+        '2*4=8  3*4=12  4*4=16')
+  })
+
 })
