@@ -16,11 +16,11 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 
 AC1: The start number should not be greater than the end number, otherwise the function will return nothing.
 
-    TASK 1 : should return false when call isGreaterThanStartNumber given start number 3 and end number is 2
+    TASK 1 : should return false when call isGreaterThanEndNumber given start number 3 and end number is 2
 
 AC2: The start number and the end number can be any integer in a range of 1 to 10 (inclusive).
 
-    TASK 2: should return true when call isGreaterThanStartNumber given start number 0 and end number is 2
+    TASK 2: should return true when call isGreaterThanEndNumber given start number 0 and end number is 2
     TASK 3: should return false when call isInTheRange given start number 0 smaller than 1
     TASK 4: should return false when call isInTheRange given end number 11
     TASK 5: should return false when call isInTheRange given end number 10
@@ -35,8 +35,8 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 graph LR
    client -- "startNumber:[int], endNumber:[int]" --> render
    
-   render -- "startNumber:[int], endNumber:[int]" --> isGreaterThanStartNumber
-   isGreaterThanStartNumber -- "[boolean]" --> render
+   render -- "startNumber:[int], endNumber:[int]" --> isGreaterThanEndNumber
+   isGreaterThanEndNumber -- "[boolean]" --> render
    
    render -- "startNumber:[int], endNumber:[int]" --> isInTheRange
    isNotInRange -- "[boolean]" --> render

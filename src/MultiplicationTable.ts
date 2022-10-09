@@ -3,7 +3,7 @@ export class MultiplicationTable {
     return '1*1=1'
   }
 
-  isGreaterThanStartNumber(start: number, end: number) {
-    return start <= end;
+  isGreaterThanEndNumber(start: number, end: number) {
+    return start > end;
   }
 }
