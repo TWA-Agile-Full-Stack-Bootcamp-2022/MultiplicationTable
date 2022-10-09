@@ -8,7 +8,7 @@ export class MultiplicationTable {
   }
 
   private checkStartNumberAndEndNumber(start: number, end: number) {
-    return start >= 1 && start <= 10 && end >= 1 && end <= 10
+    return start >= 1 && start <= 10 && end >= 1 && end <= 10 && start <= end
   }
 
 }

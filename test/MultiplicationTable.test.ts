@@ -45,4 +45,18 @@ describe('Multiplication Table', () => {
     expect(renderedWithEndNumberLessThenOne).toBe('')
     expect(renderedWithEndNumberLargerThenTen).toBe('')
   })
+
+  it('should return nothing when then start number is larger than the end number', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 1
+
+    // when
+    const rendered = table.render(start, end)
+  
+
+    // then
+    expect(rendered).toBe('')
+  })
 })
