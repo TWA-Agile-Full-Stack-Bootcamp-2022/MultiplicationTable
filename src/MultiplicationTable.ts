@@ -6,4 +6,8 @@ export class MultiplicationTable {
   isGreaterThanEndNumber(start: number, end: number) {
     return start > end;
   }
+
+  isOutOfRange(start: number, end: number) {
+    return true;
+  }
 }

@@ -1,12 +1,12 @@
 import {MultiplicationTable} from '../src/MultiplicationTable'
 
-// TASK 1 : should return false when call isGreaterThanEndNumber given start number 3 and end number is 2
-// TASK 2: should return true when call isGreaterThanEndNumber given start number 0 and end number is 2
-// TASK 3: should return true when call isGreaterThanEndNumber given start number equals with end number is 2
-// TASK 4: should return false when call isInTheRange given start number 0 smaller than 1
-// TASK 5: should return false when call isInTheRange given end number 11
-// TASK 6: should return false when call isInTheRange given end number 10
-// TASK 7: should return true when call isInTheRange given end number 9 and start number 1
+// TASK 1 : should return true when call isGreaterThanEndNumber given start number 3 and end number is 2
+// TASK 2: should return false when call isGreaterThanEndNumber given start number 0 and end number is 2
+// TASK 3: should return false when call isGreaterThanEndNumber given start number equals with end number is 2
+// TASK 4: should return true when call isOutOfRange given start number 0 smaller than 1
+// TASK 5: should return true when call isOutOfRange given end number 11
+// TASK 6: should return true when call isOutOfRange given end number 10
+// TASK 7: should return false when call isOutOfRange given end number 9 and start number 1
 // TASK 8: should return multiplication table when call render given start number 2 and end number 4
 
 describe('Multiplication Table', () => {
@@ -23,7 +23,7 @@ describe('Multiplication Table', () => {
     expect(rendered).toBe('1*1=1')
   })
 
-  it('should return false when call isGreaterThanStartNumber given start number 3 and end number is 2', () => {
+  it('should return true when call isGreaterThanStartNumber given start number 3 and end number is 2', () => {
     // given
     const table = new MultiplicationTable()
     const start = 3
@@ -36,7 +36,7 @@ describe('Multiplication Table', () => {
     expect(isGreaterThanStartNumber).toBeTruthy()
   })
 
-  it('should return true when call isGreaterThanStartNumber given start number 0 and end number is 2', () => {
+  it('should return false when call isGreaterThanStartNumber given start number 0 and end number is 2', () => {
     // given
     const table = new MultiplicationTable()
     const start = 0
@@ -49,7 +49,7 @@ describe('Multiplication Table', () => {
     expect(isGreaterThanStartNumber).toBeFalsy()
   })
 
-  it('should return true when call isGreaterThanEndNumber given start number equals with end number is 2', () => {
+  it('should return false when call isGreaterThanEndNumber given start number equals with end number is 2', () => {
     // given
     const table = new MultiplicationTable()
     const start = 2
@@ -60,5 +60,17 @@ describe('Multiplication Table', () => {
 
     //then
     expect(isGreaterThanStartNumber).toBeFalsy()
+  })
+
+  it('should return true when call isOutOfRange given start number 0 smaller than 1', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 0
+    const end = 0
+    //when
+    const isGreaterThanStartNumber = table.isOutOfRange(start, end)
+
+    //then
+    expect(isGreaterThanStartNumber).toBeTruthy()
   })
 })
