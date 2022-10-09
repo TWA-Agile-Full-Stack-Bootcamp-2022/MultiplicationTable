@@ -13,30 +13,32 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 2*3=6  3*3=9
 2*4=8  3*4=12  4*4=16
 ```
-AC1: The start number should not be greater than the end number, otherwise the function will return nothing.
-    TASK 1 : given start number 3 when greater than end number that is 2 then return null
-AC2: The start number and the end number can be any integer in a range of 1 to 10 (inclusive).
-    TASK 2 : given start number 0 when greater than end number that is 2 then return null
-    TASK 3: given end/start number 0 when smaller than 1 then return null
-    TASK 4: given end/start number 11 when greater than 10 then return null
-AC3: The output should be a string represents the multiplication table. Suppose that the start number is *2* and the end number is *4*, the output should be something like the following.
-    TASK 5: given start number 
 
+AC1: The start number should not be greater than the end number, otherwise the function will return nothing.
+
+    TASK 1 : should return false when call isGreaterThanStartNumber given start number 3 and end number is 2
+
+AC2: The start number and the end number can be any integer in a range of 1 to 10 (inclusive).
+
+    TASK 2: should return true when call isGreaterThanStartNumber given start number 0 and end number is 2
+    TASK 3: should return false when call isInTheRange given start number 0 smaller than 1
+    TASK 4: should return false when call isInTheRange given end number 11
+    TASK 5: should return false when call isInTheRange given end number 10
+
+AC3: The output should be a string represents the multiplication table. Suppose that the start number is *2* and the end number is *4*, the output should be something like the following.
+    
+    TASK 6: should return true when call isInTheRange given end number 9 and start number 1
+    TASK 7: should return multiplication table when call render given start number 2 and end number 4
 # Practice Requirement
 1. Please draw the whole tasking diagram.
 ```mermaid
 graph LR
    client -- "startNumber:[int], endNumber:[int]" --> render
    
-   render -- "startNumber:[int]" --> A[isInterger]
-   A -- "[boolean]" --> render
-   render -- "endNumber:[int]" --> B[isInterger] 
-   B -- "[boolean]" --> render
+   render -- "startNumber:[int], endNumber:[int]" --> isGreaterThanStartNumber
+   isGreaterThanStartNumber -- "[boolean]" --> render
    
-   render -- "startNumber:[int], endNumber:[int]" --> isGreaterThan
-   isGreaterThan -- "[boolean]" --> render
-   
-   render -- "startNumber:[int], endNumber:[int]" --> isNotInRange
+   render -- "startNumber:[int], endNumber:[int]" --> isInTheRange
    isNotInRange -- "[boolean]" --> render
    
    render -- "startNumber:[int], endNumber:[int]" --> renderMultiplicationTable
