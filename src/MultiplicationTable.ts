@@ -12,6 +12,14 @@ export class MultiplicationTable {
   }
 
   renderLine(start: number, end: number) {
-    return '1*1=1'
+    let multiplicationLine = ''
+    for (let num=start; num<end; num++) {
+      multiplicationLine += this.renderMultiplication(num, end) + '\t'
+    }
+    return multiplicationLine + this.renderMultiplication(end, end)
+  }
+
+  private renderMultiplication(num: number, multiplyBy: number) {
+    return num + '*' + multiplyBy + '=' + num * multiplyBy
   }
 }

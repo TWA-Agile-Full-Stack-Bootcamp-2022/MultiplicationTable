@@ -71,4 +71,17 @@ describe('Multiplication Table', () => {
     // then
     expect(rendered).toBe('1*1=1')
   })
+
+  it('should render multiplication line of (1, 2)', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 2
+
+    // when
+    const rendered = table.renderLine(start, end)
+
+    // then
+    expect(rendered).toBe('1*2=2\t2*2=4')
+  })
 })
