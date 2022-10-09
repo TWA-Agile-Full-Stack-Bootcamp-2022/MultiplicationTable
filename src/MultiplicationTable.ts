@@ -4,6 +4,6 @@ export class MultiplicationTable {
   }
 
   isGreaterThanStartNumber(start: number, end: number) {
-    return false;
+    return start <= end;
   }
 }

@@ -35,5 +35,17 @@ describe('Multiplication Table', () => {
     expect(isGreaterThanStartNumber).toBeFalsy()
   })
 
+  it('should return true when call isGreaterThanStartNumber given start number 0 and end number is 2', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 0
+    const end = 2
+
+    //when
+    const isGreaterThanStartNumber = table.isGreaterThanStartNumber(start, end)
+
+    //then
+    expect(isGreaterThanStartNumber).toBeTruthy()
+  })
 
 })
