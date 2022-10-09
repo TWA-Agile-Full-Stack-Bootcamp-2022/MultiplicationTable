@@ -29,4 +29,10 @@ describe('Multiplication Table', () => {
     //then
     expect(()=>table.render(info.start,info.end)).toThrow(new Error('error input'))
   })
+  it.each([{start: 0,end:0},{start: 9,end:13},{start:8,end:21}])('should throw error input exception when render given end not in range 1~10', (info) => {
+    //given
+    const table = new MultiplicationTable()
+    //then
+    expect(()=>table.render(info.start,info.end)).toThrow(new Error('error input'))
+  })
 })
