@@ -8,6 +8,6 @@ export class MultiplicationTable {
   }
 
   isOutOfRange(start: number, end: number) {
-    return true;
+    return start < 1 || end > 9;
   }
 }
