@@ -85,4 +85,16 @@ describe('Multiplication Table', () => {
     //then
     expect(isGreaterThanStartNumber).toBeTruthy()
   })
+
+  it('should return true when call isOutOfRange given end number 10', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 10
+    //when
+    const isGreaterThanStartNumber = table.isOutOfRange(start, end)
+
+    //then
+    expect(isGreaterThanStartNumber).toBeTruthy()
+  })
 })
