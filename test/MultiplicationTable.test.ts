@@ -13,4 +13,20 @@ describe('Multiplication Table', () => {
     //then
     expect(rendered).toBe('1*1=1')
   })
+
+  it('should return nothing when start number is not in range 1 to 10', () => {
+    // given
+    const table = new MultiplicationTable()
+    const startLessThanOne = 0
+    const startLargerThanTen = 11
+    const end = 1
+
+    // when
+    const renderedWithStartNumberLessThenOne = table.render(startLessThanOne, end)
+    const renderedWithStartNumberLargerThenTen = table.render(startLargerThanTen, end)
+
+    // then
+    expect(renderedWithStartNumberLessThenOne).toBe('')
+    expect(renderedWithStartNumberLargerThenTen).toBe('')
+  })
 })
