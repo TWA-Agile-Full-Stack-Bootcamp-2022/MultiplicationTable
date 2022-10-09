@@ -126,4 +126,15 @@ describe('Multiplication Table', () => {
     //then
     expect(tablePrint).toBe(BLANK_STRING)
   })
+  it('should return blank string table when call render given start number 0 isOutOfRange', () => {
+    // given
+    const table = new MultiplicationTable()
+    const start = 0
+    const end = 2
+    //when
+    const tablePrint = table.render(start, end)
+
+    //then
+    expect(tablePrint).toBe(BLANK_STRING)
+  })
 })

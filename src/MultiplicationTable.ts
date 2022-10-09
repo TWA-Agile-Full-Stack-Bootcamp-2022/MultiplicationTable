@@ -3,6 +3,9 @@ export class MultiplicationTable {
     if (this.isGreaterThanEndNumber(start, end)) {
       return '';
     }
+    if (this.isOutOfRange(start, end)) {
+      return '';
+    }
     return '1*1=1'
   }
 
