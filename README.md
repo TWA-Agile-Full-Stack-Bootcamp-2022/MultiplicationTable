@@ -53,6 +53,6 @@ then: return table
 1*2=2 2*2=4
 1*3=3 2*3=6 3*3=9
 1*4=4 2*4=8 3*4=12 4*4=16
-1*5=5 2*5=10 3*5=15 4*5=20
+1*5=5 2*5=10 3*5=15 4*5=20 5*5=25
 ```
 4. Please repeat step 3 until all functions are implemented.

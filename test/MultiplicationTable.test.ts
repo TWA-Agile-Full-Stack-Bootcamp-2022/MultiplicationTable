@@ -11,7 +11,7 @@ describe('Multiplication Table', () => {
     const rendered = table.render(start, end)
 
     //then
-    expect(rendered).toBe('1*1=1')
+    expect(rendered).toBe('1*1=1\n')
   })
   it('should throw error input exception when render given start grater than end', () => {
     // given
@@ -50,5 +50,18 @@ describe('Multiplication Table', () => {
     table.render(start, end)
     //then
     expect(table.numbers).toEqual(new Map([[1, [1]], [2, [1, 2]], [3, [1, 2, 3]], [4, [1, 2, 3, 4]], [5, [1, 2, 3, 4, 5]]]))
+  })
+  it('should render table form 1 to 5 when render given start 1,end 5', () => {
+    //given
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 5
+    //when
+    const result = table.render(start, end)
+    expect(result).toEqual('1*1=1\n' +
+      '1*2=2 2*2=4\n' +
+      '1*3=3 2*3=6 3*3=9\n' +
+      '1*4=4 2*4=8 3*4=12 4*4=16\n' +
+      '1*5=5 2*5=10 3*5=15 4*5=20 5*5=25\n')
   })
 })

@@ -1,15 +1,23 @@
-
 export class MultiplicationTable {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   numbers: Map<number, number[]>
 
-  public render(start: number, end: number): string{
-    if (start>end ||this.checkNumberInRangeOneToTen(start)||this.checkNumberInRangeOneToTen(end)){
+  public render(start: number, end: number): string {
+    if (start > end || this.checkNumberInRangeOneToTen(start) || this.checkNumberInRangeOneToTen(end)) {
       throw  new Error('error input')
     }
     this.getNumberList(start, end)
-    return '1*1=1'
+    let result = ''
+    this.numbers.forEach((rowColumns, row) => {
+      let rowInfo = ''
+      for (let i = start; i <= row; i++) {
+        const columns = i + '*' + row + '=' + i * row+' '
+        rowInfo += columns
+      }
+      result += rowInfo.trim() + '\n'
+    })
+    return result
   }
 
   private getNumberList(start: number, end: number) {
