@@ -8,11 +8,15 @@ export class MultiplicationTable {
       throw  new Error('error input')
     }
     this.getNumberList(start, end)
+    return this.renderTableRow(start)
+  }
+
+  private renderTableRow(start: number) {
     let result = ''
     this.numbers.forEach((rowColumns, row) => {
       let rowInfo = ''
       for (let i = start; i <= row; i++) {
-        const columns = i + '*' + row + '=' + i * row+' '
+        const columns = i + '*' + row + '=' + i * row + ' '
         rowInfo += columns
       }
       result += rowInfo.trim() + '\n'
