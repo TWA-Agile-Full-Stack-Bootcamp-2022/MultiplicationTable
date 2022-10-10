@@ -35,4 +35,14 @@ describe('Multiplication Table', () => {
     //then
     expect(()=>table.render(info.start,info.end)).toThrow(new Error('error input'))
   })
+  it('should set Table rowNumbers Map has 5key from 1 to 5 and value as list 1 to row when render given start 1,end 5', () => {
+    //given
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 5
+    //when
+    table.render(start,end)
+    //then
+    expect(table.numbers).toEqual(new Map([[1,[1]],[2,[1,2]],[3,[1,2,3]],[4,[1,2,3,4]],[5,[1,2,3,4,5]]]))
+  })
 })
