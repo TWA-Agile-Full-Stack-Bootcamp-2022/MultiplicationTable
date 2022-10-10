@@ -8,15 +8,19 @@ export class MultiplicationTable {
     if (start>end ||this.checkNumberInRangeOneToTen(start)||this.checkNumberInRangeOneToTen(end)){
       throw  new Error('error input')
     }
+    this.getNumberList(start, end)
+    return '1*1=1'
+  }
+
+  private getNumberList(start: number, end: number) {
     this.numbers = new Map<number, number[]>()
     for (let i = start; i <= end; i++) {
       const columns = []
-      for (let j = start; j <=i ; j++) {
+      for (let j = start; j <= i; j++) {
         columns.push(j)
       }
-      this.numbers.set(i,columns)
+      this.numbers.set(i, columns)
     }
-    return '1*1=1'
   }
 
   private checkNumberInRangeOneToTen(start: number) {
