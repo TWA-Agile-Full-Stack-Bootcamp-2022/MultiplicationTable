@@ -1,0 +1,18 @@
+@startwbs
+
+' Work Breakdown Structure (WBS): https://plantuml.com/wbs-diagram
+
++ multiplication Table
+ + 1. verify start and end input
+  + both start and end should be integers
+  + both start and end should be integer between 1 and 9
+  + start should not be greater then end
+ + 2. generate multiplication table
+  + the table should contain correct number of equations
+  + the length of each line of the table should be correct
+  + the table should contain correct multiplication equations
+ + 3. render multiplication table
+  + should render multiplication table of (1, 1)
+  + should render multiplication table of (2, 4)
+
+@endwbs
