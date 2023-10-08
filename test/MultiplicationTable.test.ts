@@ -14,8 +14,8 @@ describe('Multiplication Table', () => {
     expect(rendered).toBe('1*1=1')
   })
 
-  describe('should return the result of start num is greater or not than the end number', () => {
-    it('start number equals end number', () => {
+  describe('Verify start number is greater than end number', () => {
+    it('should return false given start number equals end number', () => {
       // given
       const table = new MultiplicationTable()
       const start = 1
@@ -25,7 +25,7 @@ describe('Multiplication Table', () => {
       //then
       expect(result).toBe(false)
     })
-    it('start number less than end number', () => {
+    it('should return false given start number less than end number', () => {
       // given
       const table = new MultiplicationTable()
       const start = 1
@@ -36,7 +36,7 @@ describe('Multiplication Table', () => {
       expect(result).toBe(false)
     })
 
-    it('start number greater than end number', () => {
+    it('should return true given start number greater than end number', () => {
       // given
       const table = new MultiplicationTable()
       const start = 2
