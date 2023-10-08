@@ -10,4 +10,10 @@ export class MultiplicationTable {
   public inRangeOfTen(number :number): boolean {
     return number >= 1 && number <= 10
   }
+
+  public verifyInput(start:number, end: number): boolean {
+    const isStartNumberGreaterThanEnd = this.isGreaterThan(start, end)
+    const inRangeOfTen = this.inRangeOfTen(start) && this.inRangeOfTen(end)
+    return !isStartNumberGreaterThanEnd && inRangeOfTen
+  }
 }

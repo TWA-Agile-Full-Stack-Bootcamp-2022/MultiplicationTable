@@ -79,4 +79,50 @@ describe('Multiplication Table', () => {
       expect(result).toBe(false)
     })
   })
+
+  describe('Verify Input values', () => {
+    it('should return true when start number is not greater than end number and all number is in range of 1 to 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const start = 1
+      const end = 2
+      //when
+      const isValid = table.verifyInput(start, end)
+      //then
+      expect(isValid).toBe(true)
+    })
+
+    it('should return false when start number is greater than end number and all number is in range of 1 to 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const start = 2
+      const end = 1
+      //when
+      const isValid = table.verifyInput(start, end)
+      //then
+      expect(isValid).toBe(false)
+    })
+
+    it('should return false when start number is not greater than end number but start number is not in range of 1 to 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const start = 0
+      const end = 1
+      //when
+      const isValid = table.verifyInput(start, end)
+      //then
+      expect(isValid).toBe(false)
+    })
+
+    it('should return false when start number is not greater than end number but end number is not in range of 1 to 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const start = 1
+      const end = 11
+      //when
+      const isValid = table.verifyInput(start, end)
+      //then
+      expect(isValid).toBe(false)
+    })
+  })
 })
