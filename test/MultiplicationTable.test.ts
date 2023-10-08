@@ -47,4 +47,36 @@ describe('Multiplication Table', () => {
       expect(result).toBe(true)
     })
   })
+
+  describe('Verify the number is in the range of 1 to 10', () => {
+    it('should return true given the number between 1 to 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const givenNumber = 2
+      //when
+      const result = table.inRangeOfTen(givenNumber)
+      //then
+      expect(result).toBe(true)
+    })
+
+    it('should return false given the number less than 1', () => {
+      // given
+      const table = new MultiplicationTable()
+      const givenNumber = 0
+      //when
+      const result = table.inRangeOfTen(givenNumber)
+      //then
+      expect(result).toBe(false)
+    })
+
+    it('should return false given the number greater than 10', () => {
+      // given
+      const table = new MultiplicationTable()
+      const givenNumber = 11
+      //when
+      const result = table.inRangeOfTen(givenNumber)
+      //then
+      expect(result).toBe(false)
+    })
+  })
 })

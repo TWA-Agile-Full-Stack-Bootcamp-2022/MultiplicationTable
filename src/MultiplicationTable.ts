@@ -6,4 +6,8 @@ export class MultiplicationTable {
   public isGreaterThan(start:number, end: number): boolean {
     return start > end
   }
+
+  public inRangeOfTen(number :number): boolean {
+    return number >= 1 && number <= 10
+  }
 }
