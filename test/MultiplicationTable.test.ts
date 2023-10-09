@@ -125,4 +125,17 @@ describe('Multiplication Table', () => {
       expect(isValid).toBe(false)
     })
   })
+
+  describe('Generate Column Item', () => {
+    it('should generate multiplication column item by given multiplier and multiplicand', () => {
+      // given
+      const table = new MultiplicationTable()
+      const multiplier = 1
+      const multiplicand = 1
+      //when
+      const multiplicationColumnItem = table.generateColumnItem(multiplier, multiplicand)
+      //then
+      expect(multiplicationColumnItem).toBe('1*1=1')
+    })
+  })
 })

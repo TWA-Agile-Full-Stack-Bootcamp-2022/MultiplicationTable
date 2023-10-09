@@ -16,4 +16,8 @@ export class MultiplicationTable {
     const inRangeOfTen = this.inRangeOfTen(start) && this.inRangeOfTen(end)
     return !isStartNumberGreaterThanEnd && inRangeOfTen
   }
+
+  public generateColumnItem(multiplier: number, multiplicand: number): string {
+    return multiplier + '*' + multiplicand + '=' + multiplier * multiplicand
+  }
 }
