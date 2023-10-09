@@ -24,7 +24,7 @@ export class MultiplicationTable {
   public generateRow(rowStartNumber:number, rowEndNumber:number): string {
     let multiplicationRow = ''
     for (let i = rowStartNumber; i <= rowEndNumber; i++) {
-      multiplicationRow += this.generateColumnItem(rowStartNumber, i)
+      multiplicationRow += this.generateColumnItem(i, rowEndNumber)
       if( i !== rowEndNumber) {
         multiplicationRow += ' '
       }

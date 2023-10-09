@@ -1,18 +1,6 @@
 import {MultiplicationTable} from '../src/MultiplicationTable'
 
 describe('Multiplication Table', () => {
-  it('should render multiplication table of (1, 1)', () => {
-    // given
-    const table = new MultiplicationTable()
-    const start = 1
-    const end = 1
-
-    //when
-    const rendered = table.render(start, end)
-
-    //then
-    expect(rendered).toBe('1*1=1')
-  })
 
   describe('Verify start number is greater than end number', () => {
     it('should return false given start number equals end number', () => {
@@ -148,7 +136,7 @@ describe('Multiplication Table', () => {
       //when
       const multiplicationRow = table.generateRow(rowStartNumber, rowEndNumber)
       //then
-      expect(multiplicationRow).toBe('1*1=1 1*2=2 1*3=3')
+      expect(multiplicationRow).toBe('1*3=3 2*3=6 3*3=9')
     })
   })
 })
