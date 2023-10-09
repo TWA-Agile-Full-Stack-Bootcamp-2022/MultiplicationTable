@@ -20,4 +20,15 @@ export class MultiplicationTable {
   public generateColumnItem(multiplier: number, multiplicand: number): string {
     return multiplier + '*' + multiplicand + '=' + multiplier * multiplicand
   }
+
+  public generateRow(rowStartNumber:number, rowEndNumber:number): string {
+    let multiplicationRow = ''
+    for (let i = rowStartNumber; i <= rowEndNumber; i++) {
+      multiplicationRow += this.generateColumnItem(rowStartNumber, i)
+      if( i !== rowEndNumber) {
+        multiplicationRow += ' '
+      }
+    }
+    return multiplicationRow
+  }
 }

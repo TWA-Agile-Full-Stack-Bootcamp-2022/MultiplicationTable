@@ -138,4 +138,17 @@ describe('Multiplication Table', () => {
       expect(multiplicationColumnItem).toBe('1*1=1')
     })
   })
+
+  describe('Generate Row', () => {
+    it('should generate multiplication row by given start number and end number', () => {
+      // given
+      const table = new MultiplicationTable()
+      const rowStartNumber = 1
+      const rowEndNumber = 3
+      //when
+      const multiplicationRow = table.generateRow(rowStartNumber, rowEndNumber)
+      //then
+      expect(multiplicationRow).toBe('1*1=1 1*2=2 1*3=3')
+    })
+  })
 })
