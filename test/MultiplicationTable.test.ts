@@ -1,4 +1,3 @@
-import { table } from 'console'
 import {MultiplicationTable} from '../src/MultiplicationTable'
 
 describe('Multiplication Table', () => {
@@ -73,6 +72,25 @@ describe('Multiplication Table', () => {
     const rendered = table.render(start, end)
 
     expect(rendered).toBe('')
+  })
+
+  it('should return true call isInRange when given number is 2', () => {
+    const table = new MultiplicationTable()
+    const num = 2
+
+    const result = table.isInRange(num)
+
+    expect(result).toBe(true)
+
+  })
+
+  it('should return false call isInRange when given number is 11', () => {
+    const table = new MultiplicationTable()
+    const num = 11
+
+    const result = table.isInRange(num)
+
+    expect(result).toBe(false)
   })
 
 })

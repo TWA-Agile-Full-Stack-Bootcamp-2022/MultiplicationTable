@@ -4,19 +4,18 @@ export class MultiplicationTable {
       return ''
     }
 
-    if (start < 1 || start > 10) {
+    if (!this.isInRange(start) || !this.isInRange(end)) {
       return ''
     }
-
-    if (end < 1 || end > 10) {
-      return ''
-    }
-
 
     return '1*1=1'
   }
 
   public isInteger(num: number) : boolean {
     return Number.isInteger(num)
+  }
+
+  public isInRange(num: number) : boolean {
+    return num >= 1 && num <= 10
   }
 }
