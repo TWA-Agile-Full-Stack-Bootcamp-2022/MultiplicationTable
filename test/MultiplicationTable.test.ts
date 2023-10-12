@@ -93,4 +93,14 @@ describe('Multiplication Table', () => {
     expect(result).toBe(false)
   })
 
+  it('should render empty when given start is bigger than end', () => {
+    const table = new MultiplicationTable()
+    const start = 3
+    const end = 2
+
+    const rendered = table.render(start, end)
+
+    expect(rendered).toBe('')
+  })
+
 })
