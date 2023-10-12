@@ -1,3 +1,4 @@
+import { table } from 'console'
 import {MultiplicationTable} from '../src/MultiplicationTable'
 
 describe('Multiplication Table', () => {
@@ -12,5 +13,14 @@ describe('Multiplication Table', () => {
 
     //then
     expect(rendered).toBe('1*1=1')
+  })
+
+  it('should render empty when given start is not a valid int', () => {
+    const table = new MultiplicationTable()
+    const start: any = 'a'
+    const end = 2
+    const rendered = table.render(start as number, end)
+
+    expect(rendered).toBe('')
   })
 })
