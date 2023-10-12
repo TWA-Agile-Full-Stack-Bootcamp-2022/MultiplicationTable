@@ -23,7 +23,7 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 
 ---
 
-Tasking
+# Tasking
 
 1. Should check start input is a valid number
     * Input: startNumber: int
@@ -39,10 +39,14 @@ Tasking
     * Output: isInRange: boolean
 5. should check the end number is greater than start number
     * Input: startNumber:int, endNumber: int
-    * Output: isEndNumGreaterThanStartNum: boolean
+    * Output: isGreaterThan: boolean
 6. should render Multiplication line with start number and end number:
     * Input: startNumber:int, endNumber: int
     * Output: multiplicationLine: string
 7. should render Multiplication table with start number and end number base on render Multiplication line func
     * Input: startNumber: int, endNumber: int
     * Output: multiplicationTable: string
+
+---
+# Context Map
+![](./img.png)
