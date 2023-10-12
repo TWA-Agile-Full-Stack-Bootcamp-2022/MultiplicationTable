@@ -12,7 +12,18 @@ export class MultiplicationTable {
       return ''
     }
 
-    return '1*1=1'
+    const table = []
+    for(let i = start; i <= end; i++) {
+      const line: string[] = []
+      for (let j = start; j <= i; j++) {
+        line.push(`${j}*${i}=${i*j}`)
+      }
+      table.push(line.join(' '))
+    }
+
+    const result = table.join('\n')
+    return result
+
   }
 
   public isInteger(num: number) : boolean {

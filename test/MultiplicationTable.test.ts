@@ -93,7 +93,7 @@ describe('Multiplication Table', () => {
     expect(result).toBe(false)
   })
 
-  it('should render empty when given start is bigger than end', () => {
+  it('should render empty when given start is greater than end', () => {
     const table = new MultiplicationTable()
     const start = 3
     const end = 2
@@ -101,6 +101,16 @@ describe('Multiplication Table', () => {
     const rendered = table.render(start, end)
 
     expect(rendered).toBe('')
+  })
+
+  it('should render Multiplication Table when given start is 2 and end is 4', () => {
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 4
+
+    const rendered = table.render(start, end)
+
+    expect(rendered).toBe('2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16')
   })
 
 })
