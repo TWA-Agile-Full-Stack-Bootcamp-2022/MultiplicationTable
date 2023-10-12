@@ -23,4 +23,14 @@ describe('Multiplication Table', () => {
 
     expect(rendered).toBe('')
   })
+
+  it('should render empty when given end is not a valid int', () => {
+    const table = new MultiplicationTable()
+    const start = 1
+    const end: any = 'a'
+
+    const renderd = table.render(start, end as number)
+
+    expect(renderd).toBe('')
+  })
 })
