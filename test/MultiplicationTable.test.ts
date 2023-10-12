@@ -33,4 +33,23 @@ describe('Multiplication Table', () => {
 
     expect(renderd).toBe('')
   })
+
+  it('should return true call isInteger when given number is 2', () => {
+    const table = new MultiplicationTable()
+    const num = 2
+
+    const isInteger = table.isInteger(num)
+
+    expect(isInteger).toBe(true)
+  })
+
+  it('should return false call isInteger when given is "a"', () => {
+    const table = new MultiplicationTable()
+    const num:any = 'a'
+
+    const isInteger = table.isInteger(num)
+
+    expect(isInteger).toBe(false)
+  })
+
 })
