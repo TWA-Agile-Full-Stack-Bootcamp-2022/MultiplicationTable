@@ -19,3 +19,30 @@ AC3: The output should be a string represents the multiplication table. Suppose 
 2. Please declare all the functions according to your diagram.
 3. Please write a test case following given...when...then pattern for a leaf block of the diagram. Then implement the block to pass the test. Should only test the `render` method.
 4. Please repeat step 3 until all functions are implemented.
+
+
+---
+
+Tasking
+
+1. Should check start input is a valid number
+    * Input: startNumber: int
+    * Output: isValidNumber: boolean
+2. Should check end input is a valid number
+    * Input: endNumber: int
+    * Output: isValidNumber: boolean
+3. should check start number is in range
+    * Input: startNumber: int
+    * Output: isInRange: boolean
+4. should check end number is in range
+    * Input: endNumber: int
+    * Output: isInRange: boolean
+5. should check the end number is greater than start number
+    * Input: startNumber:int, endNumber: int
+    * Output: isEndNumGreaterThanStartNum: boolean
+6. should render Multiplication line with start number and end number:
+    * Input: startNumber:int, endNumber: int
+    * Output: multiplicationLine: string
+7. should render Multiplication table with start number and end number base on render Multiplication line func
+    * Input: startNumber: int, endNumber: int
+    * Output: multiplicationTable: string
