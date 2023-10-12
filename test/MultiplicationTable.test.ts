@@ -52,4 +52,17 @@ describe('Multiplication Table', () => {
     expect(isInteger).toBe(false)
   })
 
+  it('should render empty when given start is not in range 1~10', () => {
+    const table = new MultiplicationTable()
+    const start = 11
+    const start2 = -1
+    const end = 12
+
+    const rendered = table.render(start, end)
+    const rendered2 = table.render(start2, end)
+
+    expect(rendered).toBe('')
+    expect(rendered2).toBe('')
+  })
+
 })

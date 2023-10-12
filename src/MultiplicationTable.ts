@@ -3,6 +3,12 @@ export class MultiplicationTable {
     if (!this.isInteger(start) || !this.isInteger(end)) {
       return ''
     }
+
+    if (start < 1 || start > 10) {
+      return ''
+    }
+
+
     return '1*1=1'
   }
 
