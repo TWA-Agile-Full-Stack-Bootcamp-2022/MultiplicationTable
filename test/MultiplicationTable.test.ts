@@ -113,4 +113,48 @@ describe('Multiplication Table', () => {
     expect(rendered).toBe('2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16')
   })
 
+
+  it('should return false call isGreaterThan when given start is 2 and end is 1', () => {
+    const table = new MultiplicationTable()
+    const start = 2
+    const end = 1
+
+    const result = table.isGreaterThan(start, end)
+
+    expect(result).toBe(false)
+
+  })
+
+  it('should return true call isGreaterThan when given start is 1 and end is 2', () => {
+
+    const table = new MultiplicationTable()
+    const start = 1
+    const end = 2
+
+    const result = table.isGreaterThan(start, end)
+
+    expect(result).toBe(true)
+  })
+
+  it('should render Multiplication line when given start is 3 and end is 5', () => {
+    const table = new MultiplicationTable()
+    const start = 3
+    const end = 5
+
+    const line = table.renderMultiplicationLine(start, end)
+
+    expect(line).toBe('3*5=15 4*5=20 5*5=25')
+  })
+
+  it('should render Multiplication table when given start is 3 and end is 5', () => {
+    const table = new MultiplicationTable()
+    const start = 3
+    const end = 5
+
+    const multiplicationTable = table.renderMultiplicationTable(start, end)
+
+    expect(multiplicationTable).toBe('3*3=9\n3*4=12 4*4=16\n3*5=15 4*5=20 5*5=25')
+
+  })
+
 })
