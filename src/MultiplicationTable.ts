@@ -8,6 +8,10 @@ export class MultiplicationTable {
       return ''
     }
 
+    if (end < 1 || end > 10) {
+      return ''
+    }
+
 
     return '1*1=1'
   }
